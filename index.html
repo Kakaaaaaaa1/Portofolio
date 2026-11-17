@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portofolio</title>
+    <meta
+      name="description"
+      content="Portofolio pribadi: web dan aplikasi Android."
+    />
+
+    <!-- Font: Mona Sans (dipakai di web Lando Norris) + Fraunces (pengganti Brier) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mona+Sans:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mona+Sans:wdth,wght@75..125,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..700,0..100,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="page">
+      <div class="progress" aria-hidden="true"></div>
+
+      <!-- ============ NAVIGASI ============ -->
+      <header class="nav">
+        <a class="logo" href="#top" aria-label="Kembali ke atas" data-inisial
+          >bs.</a
+        >
+        <nav aria-label="Navigasi utama">
+          <ul class="links">
+            <li><a href="#karya" data-scramble>Karya</a></li>
+            <li><a href="#tentang" data-scramble>Tentang</a></li>
+            <li><a href="#kontak" data-scramble>Kontak</a></li>
+          </ul>
+        </nav>
+        <button
+          class="btn btn--ghost menu-btn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-panel"
+        >
+          Menu
+        </button>
+      </header>
+
+      <nav class="menu-panel" id="menu-panel" aria-label="Menu" hidden>
+        <a href="#karya">Karya</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#kontak">Kontak</a>
+        <p>Waktu lokal <span data-jam>--.--</span> WIB</p>
+      </nav>
+
+      <main>
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="top">
+          <div class="intro">
+            <p class="hello rv" style="transition-delay: 450ms">
+              Halo, aku Kaka.
+            </p>
+            <p class="lead rv" style="transition-delay: 530ms">
+              Mahasiswa informatika yang bikin web dan aplikasi Android, dari
+              skema database sampai detail animasinya.
+            </p>
+            <div class="actions rv" style="transition-delay: 610ms">
+              <a class="btn mag" href="#karya" data-scramble>Lihat karya</a>
+              <a class="btn btn--ghost mag" href="#kontak" data-scramble
+                >Kontak</a
+              >
+            </div>
+          </div>
+
+          <figure
+            class="frame"
+            aria-label="Foto profil. Gerakkan kursor di atasnya untuk melihat versi kodenya."
+          >
+            <canvas></canvas>
+            <p class="frame-hint" aria-hidden="true">
+              <span class="hint-mouse">Arahkan kursor ke foto</span
+              ><span class="hint-touch">Sentuh dan geser fotonya</span>
+            </p>
+            <div class="frame-tools">
+              <input type="file" id="foto" accept="image/*" class="sr" />
+              <label class="chip" for="foto">Ganti foto</label>
+            </div>
+          </figure>
+
+          <div class="badge" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <defs>
+                <path
+                  id="badge-c"
+                  d="M60,60 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"
+                ></path>
+              </defs>
+              <g class="badge-ring">
+                <text>
+                  <textPath href="#badge-c">
+                    TERBUKA UNTUK MAGANG • WEB &amp; ANDROID •
+                  </textPath>
+                </text>
+              </g>
+              <circle class="badge-dot" cx="60" cy="60" r="27"></circle>
+              <text class="badge-ini" x="60" y="67" data-inisial>bs.</text>
+            </svg>
+          </div>
+
+          <aside class="side" aria-label="Karya pilihan">
+            <p class="side-title rv" style="transition-delay: 560ms">
+              Karya pilihan
+            </p>
+            <ul class="works">
+              <li class="rv" style="transition-delay: 630ms">
+                <a class="work" href="#karya" data-scramble
+                  ><span class="work-t">Sistem produksi percetakan</span
+                  ><span class="work-m"
+                    >Web app untuk order, jadwal produksi, dan stok</span
+                  ></a
+                >
+              </li>
+              <li class="rv" style="transition-delay: 700ms">
+                <a class="work" href="#karya" data-scramble
+                  ><span class="work-t">SPK pemilihan VGA</span
+                  ><span class="work-m"
+                    >Rekomendasi kartu grafis pakai decision tree</span
+                  ></a
+                >
+              </li>
+              <li class="rv" style="transition-delay: 770ms">
+                <a class="work" href="#karya" data-scramble
+                  ><span class="work-t">Aplikasi Android</span
+                  ><span class="work-m"
+                    >Dibangun dengan Java di Android Studio</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </aside>
+
+          <div class="corner corner--bl rv" style="transition-delay: 840ms">
+            <p class="status">
+              <i aria-hidden="true"></i>Terbuka untuk magang dan freelance
+            </p>
+            <p class="clock">Waktu lokal <span data-jam>--.--</span> WIB</p>
+          </div>
+          <nav
+            class="corner corner--br socials rv"
+            aria-label="Media sosial"
+            style="transition-delay: 880ms"
+          >
+            <a href="https://github.com/Kakaaaaaaa1" data-scramble>GitHub</a>
+            <a href="https://www.linkedin.com/" data-scramble>LinkedIn</a>
+            <a href="#kontak" data-scramble>Email</a>
+          </nav>
+
+          <!-- Nama besar: hurufnya dibuat otomatis dari CONFIG.nama di js/main.js -->
+          <h1 class="name">
+            <span class="name-inner" aria-hidden="true"></span>
+          </h1>
+        </section>
+
+        <!-- ============ STRIP KEAHLIAN ============ -->
+        <section class="marquee" aria-label="Keahlian">
+          <div class="mq-track">
+            <div class="mq-group">
+              <span class="mq-item">Java</span
+              ><span class="mq-sep" aria-hidden="true">/</span>
+              <span class="mq-item">Android</span
+              ><span class="mq-sep" aria-hidden="true">/</span>
+              <span class="mq-item">JavaScript</span
+              ><span class="mq-sep" aria-hidden="true">/</span>
+              <span class="mq-item">HTML &amp; CSS</span
+              ><span class="mq-sep" aria-hidden="true">/</span>
+              <span class="mq-item">SQL Server</span
+              ><span class="mq-sep" aria-hidden="true">/</span>
+              <span class="mq-item">Firebase</span
+              ><span class="mq-sep" aria-hidden="true">/</span>
+              <span class="mq-item">UI motion</span
+              ><span class="mq-sep" aria-hidden="true">/</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ DI KAMPUS / DI LUAR KAMPUS ============ -->
+        <section class="jalur" aria-label="Kegiatan">
+          <a class="jalur-card jalur-card--on" href="#karya">
+            <span class="blob" aria-hidden="true"
+              ><svg viewBox="0 0 200 200">
+                <path
+                  transform="translate(100 100)"
+                  d="M44.7,-61.1C57.6,-52.4,67.4,-38.9,72.1,-23.6C76.8,-8.3,76.4,8.8,70.3,23.4C64.2,38,52.4,50.2,38.4,58.8C24.4,67.4,8.2,72.4,-8.6,73.1C-25.4,73.8,-42.8,70.2,-55.1,60C-67.4,49.8,-74.6,33,-76.3,16.2C-78,-0.6,-74.2,-17.4,-65.5,-30.6C-56.8,-43.8,-43.2,-53.4,-29,-61.7C-14.8,-70,-0.1,-77,14.9,-76.1C29.9,-75.2,31.8,-69.8,44.7,-61.1Z"
+                ></path></svg
+            ></span>
+            <span class="jalur-title">Di <i>/</i> kampus</span>
+            <span class="jalur-bottom">
+              <span class="jalur-text"
+                >Proyek kuliah dan kerja praktek: sistem informasi, sistem
+                pendukung keputusan, sampai aplikasi Android.</span
+              >
+              <span class="jalur-cta">Lihat karya</span>
+            </span>
+          </a>
+          <a class="jalur-card jalur-card--off" href="#tentang">
+            <span class="blob" aria-hidden="true"
+              ><svg viewBox="0 0 200 200">
+                <path
+                  transform="translate(100 100)"
+                  d="M39.5,-55.4C51.9,-45.6,62.9,-34.4,68.4,-20.4C73.9,-6.4,73.9,10.4,67.6,24.2C61.3,38,48.7,48.8,34.6,57.6C20.5,66.4,4.9,73.2,-11.8,73.6C-28.5,74,-46.3,68,-57.9,56.1C-69.5,44.2,-74.9,26.4,-75.5,9.1C-76.1,-8.2,-71.9,-25,-62.3,-37.5C-52.7,-50,-37.7,-58.2,-23.2,-66.7C-8.7,-75.2,5.3,-84,18.2,-80.8C31.1,-77.6,27.1,-65.2,39.5,-55.4Z"
+                ></path></svg
+            ></span>
+            <span class="jalur-title">Di luar <i>/</i> kampus</span>
+            <span class="jalur-bottom">
+              <span class="jalur-text"
+                >Eksperimen web, belajar shader dan animasi, plus proyek kecil
+                buat teman dan klien.</span
+              >
+              <span class="jalur-cta">Kenalan dulu</span>
+            </span>
+          </a>
+        </section>
+
+        <!-- ============ KARYA ============ -->
+        <section class="karya" id="karya">
+          <div class="sec-head">
+            <h2 class="sec-title">
+              Karya<sup class="sec-count" aria-hidden="true">(3)</sup>
+            </h2>
+            <p class="sec-note">
+              Proyek dari kuliah dan kerja praktek, dari skema database sampai
+              tampilan yang dipakai orang.
+            </p>
+          </div>
+          <!-- data-proj = nomor kartu preview di bagian bawah file (0, 1, 2) -->
+          <ul class="projs">
+            <li>
+              <a class="proj" href="#karya" data-proj="0" data-cursor="Lihat"
+                ><span class="proj-t">Sistem produksi percetakan</span
+                ><span class="proj-d"
+                  >Web app internal buat ngatur order, rencana produksi, dan
+                  stok bahan.</span
+                ><span class="proj-y">Kerja praktek, 2026</span></a
+              >
+            </li>
+            <li>
+              <a class="proj" href="#karya" data-proj="1" data-cursor="Lihat"
+                ><span class="proj-t">SPK pemilihan VGA</span
+                ><span class="proj-d"
+                  >Sistem pendukung keputusan yang merekomendasikan kartu grafis
+                  pakai metode decision tree.</span
+                ><span class="proj-y">Tugas RPL, 2026</span></a
+              >
+            </li>
+            <li>
+              <a class="proj" href="#karya" data-proj="2" data-cursor="Lihat"
+                ><span class="proj-t">Aplikasi Android</span
+                ><span class="proj-d"
+                  >Kumpulan aplikasi latihan mobile programming, dibangun dengan
+                  Java di Android Studio.</span
+                ><span class="proj-y">Mata kuliah, 2026</span></a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <!-- ============ TENTANG ============ -->
+        <section class="tentang" id="tentang">
+          <h2 class="sec-title">Tentang</h2>
+          <div class="about">
+            <!-- Kata-kata di paragraf ini akan menyala satu per satu waktu di-scroll -->
+            <p class="about-text">
+              Aku suka ngerjain dua sisi aplikasi: bagian yang jarang kelihatan,
+              kayak skema database dan logika di belakangnya, dan bagian yang
+              langsung kerasa, kayak tampilan dan animasi. Sekarang lagi belajar
+              shader dan WebGL biar web yang aku bikin terasa lebih hidup.
+            </p>
+            <div class="facts">
+              <div class="fact">
+                <h3>Bahasa pemrograman</h3>
+                <p>Java, JavaScript, HTML &amp; CSS</p>
+              </div>
+              <div class="fact">
+                <h3>Database</h3>
+                <p>SQL Server, Firebase</p>
+              </div>
+              <div class="fact">
+                <h3>Alat sehari-hari</h3>
+                <p>Android Studio, VS Code, SSMS</p>
+              </div>
+              <div class="fact">
+                <h3>Lagi dipelajari</h3>
+                <p>GLSL, WebGL, animasi web</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ KONTAK ============ -->
+        <footer class="kontak" id="kontak">
+          <p class="cta-pre">Punya ide proyek atau lowongan magang?</p>
+          <h2 class="cta-text" aria-label="Ayo ngobrol">
+            <span
+              class="cta-inner"
+              aria-hidden="true"
+              data-huruf="Ayo ngobrol"
+            ></span>
+          </h2>
+          <div class="cta-row">
+            <p class="email" data-email>Kakapambayungajah@gmail.com</p>
+            <button
+              class="btn mag"
+              type="button"
+              data-salin
+              data-cursor="Salin"
+            >
+              Salin email
+            </button>
+          </div>
+          <div class="foot">
+            <p>
+              © <span data-tahun>2026</span> <span data-nama>Kaka Anditya Pambayung</span>
+            </p>
+            <p>Waktu lokal <span data-jam>--.--</span> WIB</p>
+            <div class="foot-links">
+              <a href="https://github.com/" data-scramble>GitHub</a>
+              <a href="https://www.linkedin.com/" data-scramble>LinkedIn</a>
+              <a href="#top" data-scramble>Kembali ke atas</a>
+            </div>
+          </div>
+        </footer>
+      </main>
+
+      <!-- Elemen yang ngikutin kursor -->
+      <div class="grain" aria-hidden="true"></div>
+      <div class="cursor" aria-hidden="true">
+        <span class="cursor-label"></span>
+      </div>
+      <div class="card" aria-hidden="true">
+        <div class="cover">
+          <div class="cover-tags">
+            <span>Web app</span><span>Firebase</span><span>Kerja praktek</span>
+          </div>
+          <p class="cover-t">Percetakan</p>
+        </div>
+        <div class="cover">
+          <div class="cover-tags">
+            <span>Web</span><span>Decision tree</span><span>RPL</span>
+          </div>
+          <p class="cover-t">SPK VGA</p>
+        </div>
+        <div class="cover">
+          <div class="cover-tags">
+            <span>Java</span><span>Android Studio</span><span>Mobile</span>
+          </div>
+          <p class="cover-t">Android</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
